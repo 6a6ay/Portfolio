@@ -21,14 +21,14 @@
 |----------|-------------|---------|
 | HTML5 | VS Code / Git | GitHub Pages |
 | CSS3 (Grid, Flexbox, Custom Properties, Keyframes) | Google Fonts | Cloudflare DNS (Reg.ru) |
-| Image optimization (Squoosh/TinyPNG) | 
+| Vanilla JavaScript (DOM, Intersection Observer) | Image optimization (Squoosh/TinyPNG) | |
 
 ---
 
 ##  Структура проекта
 Portfolio/
-index.html # Основная разметка
-style.css # Стили и анимации
-README.md # Документация проекта
-assets/
-img/ # Изображения работ, фоны, прелоадер
+- index.html # Основная разметка
+- style.css # Стили и анимации
+- README.md # Документация проекта
+- assets/
+- img/ # Изображения работ, фоны, прелоадер
