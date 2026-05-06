@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Портфолио художника Евгения Боровкова. Реалистическая масляная живопись: портреты, натюрморты, пейзажи, графика. Заказать картину в Краснодаре.">
+    <meta name="keywords" content="художник, масляная живопись, портрет на заказ, Краснодар, реалистичная живопись, купить картину">
+    <meta name="author" content="Евгений Боровков">
+
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:title" content="Евгений Боровков | Художник-реалист">
+    <meta property="og:description" content="Портфолио художника. Масляная живопись: портреты, натюрморты, пейзажи">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/img/og-image.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Евгений Боровков
+        Художник</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Шрифты: Playfair, Barlow, Mulish -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;900&family=Barlow:wght@400;600&family=Mulish:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="preloader" id="preloader">
+    <img src="assets/img/zeus.webp" alt="Zeus" class="preloader__img">
+    <div class="preloader__title">DIMAMITS ART</div>
+    <div class="preloader__bar-wrap">
+        <div class="preloader__bar"></div>
+    </div>
+</div>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                
+                <img src="assets/img/logo2.webp" alt="Логотип" class="logo-img">
+            </a>
+            <nav class="nav">
+                <a href="#hero" class="nav__link">Главная</a>
+                <a href="#about" class="nav__link">Обо мне</a>
+                <a href="#portfolio" class="nav__link">Портфолио</a>
+                <a href="#contacts" class="nav__link">Контакты</a>
+            </nav>
+            <a href="https://vk.com/dimamits" target="_blank" class="btn btn--primary">Заказать работу</a>
+            <a href="https://vk.com/dimamitsart" target="_blank" class="header__vk">Блог ВК</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero (Главный экран) -->
+        <section id="hero" class="hero reveal">
+            <div class="container hero__content">
+                <h1 class="hero__title">Евгений Боровков</h1>
+                <div class="title-underline"></div>
+                <p class="hero__subtitle">Художник-реалист · Масляная живопись</p>
+                <p class="hero__text">
+                    Создаю реалистичные картины маслом, которые передают глубину человеческой души и красоту окружающего мира.
+                </p>
+                <a href="#portfolio" class="btn btn--dark">Смотреть работы</a>
+            </div>
+        </section>
+
+        <!-- Обо мне -->
+        <section id="about" class="about reveal">
+            <div class="container about__container">
+                <div class="about__text">
+                    <h2 class="section-title">Обо мне</h2>
+                    <div class="title-underline"></div>
+                    <p>Меня зовут Боровков Евгений, мне 21 год. Сейчас живу, учусь и работаю в городе Краснодар, но сам родом из Новороссийска, где прожил почти 18 лет своей жизни.</p>
+                    <p>Являюсь профессиональным художником, работаю в основном в реалистической манере масляной живописи. Я многопрофильный художник, люблю писать пейзажи, натюрморты, да и вообще что угодно, но всё же самым любимым жанром является именно портрет. Красота человеческого лица, тела, рук – это то, что вдохновляет меня больше всего.</p>
+                    <p>Данное портфолио я сделал, чтобы люди могли ознакомиться с моим творчеством и заказать себе картины на любой вкус и цвет.</p>
+                </div>
+                <div class="about__image">
+                    <!-- Вставь сюда реальное фото, если есть -->
+                    <img src="assets/img/photo_e.webp" alt="Евгений Боровков">
+                </div>
+            </div>
+        </section>
+
+        <!-- Портфолио -->
+        <section id="portfolio" class="portfolio reveal">
+            <div class="container">
+                <h2 class="section-title">Портфолио</h2>
+                <div class="title-underline"></div>
+                
+                <!-- Кнопки фильтрации -->
+                <div class="portfolio__filters">
+                    <button class="filter-btn active" data-filter="all">Все работы</button>
+                    <button class="filter-btn" data-filter="portraits">Портреты</button>
+                    <button class="filter-btn" data-filter="still-life">Натюрморты</button>
+                    <button class="filter-btn" data-filter="landscapes">Пейзажи</button>
+                    <button class="filter-btn" data-filter="graphics">Графика</button>
+                </div>
+
+                <!-- Динамическое описание -->
+                <div class="portfolio__desc">
+                    <p id="desc-text">Здесь представлены все мои работы. Выберите жанр в меню выше.</p>
+                </div>
+
+                <!-- Сетка работ (заполняется через JS) -->
+                <div class="portfolio__grid" id="portfolio-grid">
+                    
+                    <!-- Сюда JS вставит карточки -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Контакты -->
+        <section id="contacts" class="contacts reveal">
+            <div class="container">
+                <h2 class="section-title section-title--center">Контакты</h2>
+                <p class="contacts__intro">Свяжитесь со мной для обсуждения заказа или любых вопросов</p>
+                
+                <div class="contacts__grid">
+                    <a href="https://vk.com/dimamits" target="_blank" class="contact-card">
+                        <h3>ВКонтакте</h3>
+                        <span>Основной контакт</span>
+                    </a>
+                    <a href="https://t.me/DIMAMITS" target="_blank" class="contact-card">
+                        <h3>Telegram</h3>
+                        <span>Мессенджер</span>
+                    </a>
+                    <a href="tel:+79180589956" class="contact-card">
+                        <h3>+7 918 058-99-56</h3>
+                        <span>Позвонить</span>
+                    </a>
+                    <a href="mailto:Borovkov1401@mail.ru" class="contact-card">
+                        <h3>Borovkov1401@mail.ru</h3>
+                        <span>Написать на почту</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container reveal">
+            <p>© 2026 Евгений Боровков. Все права защищены.</p>
+            <div class="footer__links">
+                <a href="https://vk.com/dimamitsart">Блог ВК</a>
+                <a href="https://www.instagram.com/_dimamits_artist_/" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+   
+<!-- Скрипт для работы портфолио и модального окна -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // Preloader
+    const preloader = document.getElementById('preloader');
+    const isMobilePreload = window.innerWidth <= 768;
+    // На мобильных прячем быстрее — 3с вместо 6с
+    const fallbackTimer = setTimeout(() => preloader.classList.add('hidden'), isMobilePreload ? 3000 : 6000);
+
+    // === ДАННЫЕ ПОРТФОЛИО ===
+    const works = [
+        // Портреты
+        { title: "«Катя»", size: "60×90", mat: "холст, масло", year: "2026", cat: "portraits", img: "kate.webp" },
+        { title: "«Арина»", size: "60×90", mat: "холст, масло", year: "2026", cat: "portraits", img: "arina.webp" },
+        { title: "«Настя»", size: "60×80", mat: "холст, масло", year: "2026", cat: "portraits", img: "nastya.webp" },
+        { title: "«Академ. постановка»", size: "50×70", mat: "холст, масло", year: "2025", cat: "portraits", img: "academ.webp" },
+        { title: "«Тоже своего рода бокс»", size: "55×90", mat: "холст, масло", year: "2026", cat: "portraits", img: "box.webp" },
+        { title: "«Соня»", size: "40×50", mat: "холст, масло", year: "2025", cat: "portraits", img: "sonya.webp" },
+        { title: "«Этюд»", size: "30×40", mat: "холст, масло", year: "2024", cat: "portraits", img: "edit.webp" },
+        
+        // Натюрморты
+        { title: "«Сезон охоты»", size: "80×90", mat: "холст, масло", year: "2025", cat: "still-life", img: "bounty.webp" },
+        { title: "«Квартира №196»", size: "60×80", mat: "холст, масло", year: "2025", cat: "still-life", img: "flat.webp" },
+        { title: "«Настольный натюрморт»", size: "50×80", mat: "холст, масло", year: "2026", cat: "still-life", img: "table.webp" },
+
+        // Пейзажи
+        { title: "«Морской пейзаж»", size: "50×100", mat: "холст, масло", year: "2025", cat: "landscapes", img: "sea.webp" },
+        { title: "«Скалы Туапсе»", size: "40×60", mat: "холст, масло", year: "2025", cat: "landscapes", img: "tuapse.webp" },
+        { title: "«Туапсинский дольмен»", size: "30×40", mat: "холст, масло", year: "2025", cat: "landscapes", img: "duplo.webp" },
+        { title: "«Крылья Абрау»", size: "50×50", mat: "холст, масло", year: "2024", cat: "landscapes", img: "wings.webp" },
+        { title: "«Пейзаж по мотивам игры Death Stranding»", size: "50×70", mat: "холст, масло", year: "2024", cat: "landscapes", img: "death.webp" },
+        
+        // Графика
+        { title: "«Зевс»", size: "60×80", mat: "ватман, графит", year: "2024", cat: "graphics", img: "zeus.webp" },
+        { title: "«Таня»", size: "60×80", mat: "ватман, графит", year: "2025", cat: "graphics", img: "tanya.webp" },
+        { title: "«Таня»", size: "30×42", mat: "бумага, графит", year: "2025", cat: "graphics", img: "tanya_close.webp" },
+        { title: "«Даша»", size: "30×42", mat: "бумага, графит", year: "2025", cat: "graphics", img: "dasha.webp" }
+    ];
+
+    const descriptions = {
+        'all': 'Здесь представлены все мои работы. Выберите жанр в меню выше.',
+        'portraits': 'Как я говорил ранее, портреты для меня самый любимый и интересный жанр. Их вариаций огромное множество и вместе с заказчиком сможем подобрать наиболее подходящий: одиночный портрет; парный; групповой или семейный; только лицо; бюст; по пояс; в полный рост; с руками и без; на природе или на любимом кресле; с вашими питомцами; обнажённый; тематический',
+        'still-life': 'Натюрморт – это не просто набор предметов на столе. Он может отражать вас, ваше хобби, профессию, дом или город, содержать в себе любимые вами вещи, будь то фамильная ваза или букет цветов, подаренных любимым человеком. Каждый натюрморт – это ваша маленькая история, которую я с радостью помогу увековечить на холсте',
+        'landscapes': 'С пейзажами всё также неочевидно, как и с натюрмортом. Это может быть мимолётный момент погодного состояния, может быть панорама вашей родной улицы, дома. Тихая лесная поляна или шумная суета города. Мне, например, как новороссийцу, близка тема морских и горных пейзажей',
+        'graphics': 'Графика тоже не менее интересное направление искусства. Хоть она и технически проще живописи, менее красивой и выразительной она от этого не становится, а порой может дать даже более интересные и художественные эффекты. Так же графика из-за своей ограниченной палитры цветов смотрится выигрышно почти в любом интерьере'
+    };
+
+    const categoryNames = {
+        'portraits': 'Портреты',
+        'still-life': 'Натюрморты', 
+        'landscapes': 'Пейзажи',
+        'graphics': 'Графика'
+    };
+    
+    // === ЭЛЕМЕНТЫ DOM ===
+    const grid = document.getElementById('portfolio-grid');
+    const descText = document.getElementById('desc-text');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    
+    // Элементы модального окна
+    const modal = document.getElementById('work-modal');
+    const modalImage = document.getElementById('modal-image');
+    const modalTitle = document.getElementById('modal-title');
+    const modalSize = document.getElementById('modal-size');
+    const modalMaterial = document.getElementById('modal-material');
+    const modalYear = document.getElementById('modal-year');
+    const modalCategory = document.getElementById('modal-category');
+    const modalClose = document.querySelector('.modal__close');
+    const modalOverlay = document.querySelector('.modal__overlay');
+    const modalPrev = document.querySelector('.modal__nav--prev');
+    const modalNext = document.querySelector('.modal__nav--next');
+    
+    // Состояние
+    let currentFilteredWorks = [];
+    let currentIndex = 0;
+    let revealObserver;
+
+    // Умная предзагрузка — прячем preloader когда всё готово (мин. 2.5с)
+    const allImgNames = works.map(w => w.img).filter(Boolean);
+    let loadedCount = 0;
+    let minTimeDone = false;
+    let allImgsDone = false;
+
+    function tryHidePreloader() {
+        if (minTimeDone && allImgsDone) {
+            clearTimeout(fallbackTimer);
+            preloader.classList.add('hidden');
+        }
+    }
+
+    setTimeout(() => { minTimeDone = true; tryHidePreloader(); }, 2500);
+
+    allImgNames.forEach(imgName => {
+        const img = new Image();
+        img.onload = img.onerror = () => {
+            loadedCount++;
+            if (loadedCount >= allImgNames.length) {
+                allImgsDone = true;
+                tryHidePreloader();
+            }
+        };
+        img.src = 'assets/img/' + imgName;
+    });
+
+    // === ФУНКЦИЯ ОТРИСОВКИ РАБОТ ===
+    function renderWorks(filter = 'all') {
+        if (!grid) return;
+        grid.innerHTML = '';
+        
+        currentFilteredWorks = filter === 'all' 
+            ? works 
+            : works.filter(w => w.cat === filter);
+
+        if (descText) {
+            descText.textContent = descriptions[filter] || descriptions['all'];
+        }
+
+        currentFilteredWorks.forEach((work, index) => {
+            const card = document.createElement('article');
+            card.className = 'work-card reveal';
+            card.style.transitionDelay = `${index * 0.12}s`;
+            card.style.cursor = 'pointer';
+
+            const imgSrc = work.img ? `assets/img/${work.img}` : '';
+            
+            card.innerHTML = `
+                <div class="work-card__img">
+                    <img src="${imgSrc}" alt="${work.title}" loading="lazy" onerror="this.parentElement.style.background='#eee'">
+                </div>
+                <div class="work-card__info">
+                    <h3>${work.title}</h3>
+                    <span>${work.size}, ${work.mat}, ${work.year}</span>
+                </div>
+            `;
+            
+            // Клик по карточке → открытие модального окна
+            card.addEventListener('click', () => openModal(index));
+            
+            grid.appendChild(card);
+        });
+
+        setupObserver();
+    }
+
+    // === МОДАЛЬНОЕ ОКНО ===
+    function openModal(index) {
+        currentIndex = index;
+        const work = currentFilteredWorks[currentIndex];
+        
+        modalImage.src = work.img ? `assets/img/${work.img}` : '';
+        modalImage.alt = work.title;
+        modalTitle.textContent = work.title;
+        modalSize.textContent = work.size;
+        modalMaterial.textContent = work.mat;
+        modalYear.textContent = work.year;
+        modalCategory.textContent = categoryNames[work.cat] || work.cat;
+        
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function showPrevWork() {
+        currentIndex = (currentIndex - 1 + currentFilteredWorks.length) % currentFilteredWorks.length;
+        openModal(currentIndex);
+    }
+
+    function showNextWork() {
+        currentIndex = (currentIndex + 1) % currentFilteredWorks.length;
+        openModal(currentIndex);
+    }
+
+    // Обработчики модального окна
+    if (modalClose) modalClose.addEventListener('click', closeModal);
+    if (modalOverlay) modalOverlay.addEventListener('click', closeModal);
+    if (modalPrev) modalPrev.addEventListener('click', showPrevWork);
+    if (modalNext) modalNext.addEventListener('click', showNextWork);
+    
+    document.addEventListener('keydown', (e) => {
+        if (!modal.classList.contains('active')) return;
+        if (e.key === 'Escape') closeModal();
+        if (e.key === 'ArrowLeft') showPrevWork();
+        if (e.key === 'ArrowRight') showNextWork();
+    });
+
+    // === ANIMATION OBSERVER ===
+    const isMobile = window.innerWidth <= 768;
+
+    function setupObserver() {
+        if (revealObserver) revealObserver.disconnect();
+
+        // На мобильных — просто показываем все элементы сразу без Observer
+        if (isMobile) {
+            document.querySelectorAll('.reveal').forEach(el => {
+                el.classList.add('visible');
+            });
+            return;
+        }
+
+        revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -30px 0px'
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            if (!el.classList.contains('visible')) {
+                revealObserver.observe(el);
+            }
+        });
+    }
+
+    // === ФИЛЬТРЫ ===
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderWorks(btn.dataset.filter);
+        });
+    });
+
+    // === ЗАПУСК ===
+    renderWorks('all');
+    setupObserver();
+});
+</script>
+    <!-- Модальное окно для просмотра работ -->
+<div id="work-modal" class="modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+        <button class="modal__close" aria-label="Закрыть">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        
+        <button class="modal__nav modal__nav--prev" aria-label="Предыдущая работа">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        
+        <button class="modal__nav modal__nav--next" aria-label="Следующая работа">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+        
+        <div class="modal__body">
+            <div class="modal__image-wrapper">
+                <img src="" alt="" class="modal__image" id="modal-image">
+            </div>
+            <div class="modal__info">
+                <h2 class="modal__title" id="modal-title"></h2>
+                <div class="modal__details">
+                    <div class="modal__detail">
+                        <span class="modal__detail-label">Размер:</span>
+                        <span class="modal__detail-value" id="modal-size"></span>
+                    </div>
+                    <div class="modal__detail">
+                        <span class="modal__detail-label">Материал:</span>
+                        <span class="modal__detail-value" id="modal-material"></span>
+                    </div>
+                    <div class="modal__detail">
+                        <span class="modal__detail-label">Год:</span>
+                        <span class="modal__detail-value" id="modal-year"></span>
+                    </div>
+                </div>
+                <div class="modal__category" id="modal-category"></div>
+                <a href="https://vk.com/dimamits" target="_blank" class="btn btn--primary modal__order-btn">
+                    Заказать подобную работу
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
